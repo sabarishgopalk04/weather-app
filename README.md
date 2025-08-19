@@ -1,19 +1,19 @@
 🌦️ Weather App
 
-A simple and interactive weather application built using HTML, CSS, and JavaScript.
-This app fetches live weather data from the OpenWeatherMap API and displays the current weather conditions for any city in the world.
+This project was developed as part of my CodeClause Web Development Internship (Entry Level Project).
+It is a simple yet functional weather application built using HTML, CSS, and JavaScript, fetching real-time weather data from the OpenWeatherMap API.
 
 🚀 Features
 
 🌍 Search weather by city name
 
-🌡 Displays temperature, condition, humidity, and wind speed
+🌡 Displays temperature, weather condition, humidity, and wind speed
 
-🎨 Clean and responsive UI with weather icons (☀️, ☁️, 🌧, ❄️, etc.)
+🎨 Clean and responsive UI with weather icons
 
 ⚡ Error handling for invalid city names
 
-🔑 Uses OpenWeatherMap API for real-time data
+🔑 Real-time data using OpenWeatherMap API
 
 🛠️ Tech Stack
 
@@ -30,39 +30,34 @@ weather-app/
 
 ⚙️ Installation & Usage
 
-Clone the repository
+1.Clone the repository
 
 git clone https://github.com/sabarishgopalk04/weather-app.git
 cd weather-app
 
+2.Open index.html in your browser
 
-Open index.html in your browser
-
-Enter a city name and get live weather updates 🌦
+3.Enter a city name and get live weather updates 🌦
 
 🔑 API Key Setup
 
-Create a free account at OpenWeatherMap
+1.Create a free account at OpenWeatherMap
 
-Get your API key
+2.Get your API key
 
-Open script.js and replace the placeholder with your key:
+3.Open script.js and replace the placeholder with your key:
 
 const apiKey = "your_api_key_here";
 
-🌟 Future Enhancements
+🌟 Internship Project Note
 
-📍 Auto-detect user’s location (Geolocation API)
+This project was created as part of my CodeClause Web Development Internship (Entry Level Project) to demonstrate skills in:
 
-⏰ Show local time of the searched city
+API integration
 
-📊 5-day forecast with charts
+Frontend development with HTML, CSS, and JavaScript
 
-🎨 Dynamic background based on weather
-
-🤝 Contributing
-
-Pull requests are welcome! If you’d like to improve the project, feel free to fork and submit a PR.
+Real-time data handling
 
 📜 License
 
