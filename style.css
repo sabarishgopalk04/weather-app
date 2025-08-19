@@ -1,0 +1,128 @@
+/* === GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  overflow: hidden;
+}
+
+/* === BACKGROUND WAVES === */
+.ocean {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  bottom: 0;
+  left: -50%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 100%;
+  animation: wave 8s infinite linear;
+}
+.wave:nth-child(2) {
+  animation-duration: 12s;
+  background: rgba(255,255,255,0.1);
+}
+.wave:nth-child(3) {
+  animation-duration: 16s;
+  background: rgba(255,255,255,0.05);
+}
+@keyframes wave {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(25%) translateY(-20px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+/* === WEATHER APP CARD === */
+.weather-app {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.weather-app h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  width: 80%;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+button {
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* === RESULT SECTION === */
+.weather-result {
+  margin-top: 20px;
+  color: #fff;
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+}
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.weather-result h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.icon {
+  font-size: 4rem;
+  margin: 15px 0;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+.details {
+  font-size: 1rem;
+  line-height: 1.6;
+}
