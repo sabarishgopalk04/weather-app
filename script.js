@@ -10,7 +10,6 @@ async function getWeather() {
   }
 
   try {
-    // ✅ Build URL once
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     const response = await fetch(url);
@@ -20,8 +19,7 @@ async function getWeather() {
       resultDiv.innerHTML = "<p>❌ City not found. Try again.</p>";
       return;
     }
-
-    // Dynamic Icon Selection
+    
     const weather = data.weather[0].main.toLowerCase();
     let icon = "🌈";
     if (weather.includes("cloud")) icon = "☁️";
@@ -41,8 +39,9 @@ async function getWeather() {
       </div>
     `;
 
-    resultDiv.style.opacity = "1"; // Trigger slide animation
+    resultDiv.style.opacity = "1"; 
   } catch (error) {
     resultDiv.innerHTML = "<p>⚠️ Something went wrong. Please try again.</p>";
   }
 }
+
